@@ -1,0 +1,38 @@
+<!--<form class="login">-->
+<!--<h1>Log In</h1>-->
+<!--<fieldset >-->
+<!--<input class="username" type="text" placeholder="请输入用户名" autofocus required  #account/>-->
+<!--<input class="password" type="password" placeholder="请输入当前的密码" required  #password />-->
+<!--</fieldset>-->
+<!--<fieldset >-->
+<!--<input type="submit"  value="Log in" (click)="sumbit(account,password)"><br/>-->
+<!--<a href="">Forgot your password?</a>-->
+<!--<a href="">Register</a>-->
+<!--</fieldset>-->
+
+<!--</form>-->
+
+
+<form class="form-inline  form-border text-center form-vertical" (submit)="sumbit(account.value,password.value)">
+  <h1>Log In</h1>
+  <p>{{name}}</p>
+
+  <small>No account yet?
+    <button (click)="onSkipRegister()" class="SingUpColor">Sign up</button>
+  </small>
+  <br>
+  <div class="input-group margin-top">
+    <span class="input-group-addon">@</span>
+    <input placeholder="Username" class="form-control" type="text" autofocus required #account>
+  </div>
+  <br>
+  <div class="input-group margin-top  ">
+    <span class="input-group-addon">@</span>
+    <input placeholder="Password" class="form-control" type="password" required #password>
+  </div>
+  <br>
+  <button type="submit" value="Login" class="text-center margin-top btn LoginButton " role="button">Login</button>
+  <!--{{name}}-->
+  <app-thirdlogin></app-thirdlogin>
+
+</form>

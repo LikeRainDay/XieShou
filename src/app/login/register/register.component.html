@@ -1,0 +1,30 @@
+<form class="form-border form-horizontal text-center form-inline form-vertical"
+      (submit)="registerCheck(account.value,email.value,password.value,checkpassword.value)">
+  <h1>Sign Up</h1>
+  <small>Have an account? <button  (click)="skipLogin()">Login</button></small>
+  <br>
+
+  <input class="margin-top" placeholder="{{inputTypes[0]}}" type="text" required autofocus #account><br>
+  <input class="margin-top" placeholder="{{inputTypes[1]}}" type="email" required #email><br>
+  <input class="margin-top" placeholder="{{inputTypes[2]}}" type="password" required #password
+         (keyup)="checkPasswordForm(password.value)"
+         (blur)="checkPasswordForm(password.value)"><br>
+
+  <input class="margin-top" placeholder="{{inputTypes[3]}}" type="password" required #checkpassword
+         (keyup)="checkPasswordIsRight(password.value,checkpassword.value)"><br>
+  <!--进行单选按钮的设置-->
+  <div class="input-group">
+    <span class="input-group-addon">
+      <input type="checkbox" aria-label="...">
+    </span>
+    <p>I agree to the <a href="">Terms of Service</a></p><br>
+  </div>
+
+  <button type="submit" role="button">Sign Up</button>
+
+  <app-thirdlogin></app-thirdlogin>
+
+</form>
+
+
+

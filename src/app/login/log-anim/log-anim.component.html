@@ -1,0 +1,13 @@
+<div>
+
+
+  <!--登录模块-->
+  <app-login [@skipRegister]="skipLogin" (startLogin2Register)="startLoginAnimation()"></app-login>
+  <!-- 注册模块 -->
+  <app-register [@skipLogin]="skipRegister" (startRegister2Login)="startRegisterAnimation()"></app-register>
+
+
+</div>
+
+
+
